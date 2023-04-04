@@ -73,8 +73,12 @@ class _GameState extends State<Game> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset("images/moeda_cara.png", height: 100),
-            Image.asset("images/moeda_coroa.png", height: 100),
+            GestureDetector(
+                onTap: () => _selectedOption("cara"),
+                child: Image.asset("images/moeda_cara.png", height: 100)),
+            GestureDetector(
+                onTap: () => _selectedOption("coroa"),
+                child: Image.asset("images/moeda_coroa.png", height: 100)),
           ],
         )
       ]),
